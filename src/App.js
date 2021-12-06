@@ -5,6 +5,7 @@ const drivers = [];
 function App() {
   const [inputValue, setInputValue] = useState('');
   const [randomDriver, setRandomDriver] = useState(null);
+  const [showRandomizedGroup, setShowRandomizedGroup] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -24,6 +25,8 @@ function App() {
     const filteredDrivers  = drivers.filter(driver => driver !== randomDriver);
     setRandomDriver(filteredDrivers[Math.floor(Math.random() * filteredDrivers.length)])
   }
+
+  const handleRandomizeGroup = () => drivers.sort(() => Math.random() - 0.5);
 
   return (
     <>
@@ -50,12 +53,21 @@ function App() {
         <button 
           onClick={handleRandomDriverRequest}
         >
-          {!randomDriver ? 'Get the Driver!' : 'Get a different one?'}
+          {!randomDriver ? 'Get a Driver!' : 'Get a different one?'}
         </button>
+        <span>{' or '}</span>
+        <button onClick={() => setShowRandomizedGroup(true)}>Randomize the whole group</button>
       </section>}
       {randomDriver && 
         <section>
           <h1>{randomDriver}</h1>
+        </section>
+      }
+      {showRandomizedGroup && 
+        <section>
+          <ol>
+            {[...drivers].sort(() => Math.random() - 0.5).map(person => <li key={person}>{person}</li>)}
+          </ol>
         </section>
       }
     </>
