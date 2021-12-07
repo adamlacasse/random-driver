@@ -26,8 +26,6 @@ function App() {
     setRandomDriver(filteredDrivers[Math.floor(Math.random() * filteredDrivers.length)])
   }
 
-  const handleRandomizeGroup = () => drivers.sort(() => Math.random() - 0.5);
-
   return (
     <>
     <header>
