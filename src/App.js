@@ -60,11 +60,13 @@ function App() {
       </section>}
       {randomDriver && 
         <section>
-          <h1>{randomDriver}</h1>
+          <h2>The new driver is</h2>
+          <h3>{randomDriver}</h3>
         </section>
       }
       {showRandomizedGroup && 
         <section>
+          <h2>Let's go in this order today!</h2>
           <ol>
             {[...drivers].sort(() => Math.random() - 0.5).map(person => <li key={person}>{person}</li>)}
           </ol>
