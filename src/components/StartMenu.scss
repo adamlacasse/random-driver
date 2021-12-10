@@ -1,0 +1,62 @@
+$start-menu-width: 300px;
+$start-menu-zindex: 3;
+
+.start-menu {
+  position: absolute;
+  top: 50px;
+  z-index: $start-menu-zindex;
+  max-width: $start-menu-width;
+
+  &-contents {
+    display: flex;
+
+    .windows95 {
+      font-weight: 900;
+      font-size: 25px;
+      background-color: gray;
+      color: silver;
+      writing-mode: tb-rl;
+      transform: rotate(-180deg);
+
+      padding-top: 1rem;
+
+      span {
+        font-weight: 300;
+        color: white;
+      }
+    }
+
+    .list-item-container {
+      margin: 0 0.25rem;
+      width: $start-menu-width !important;
+
+      li {
+        justify-content: flex-start;
+        margin: 0.5rem 0;
+
+        img {
+          max-height: 100%;
+          margin-right: 0.5rem;
+        }
+
+        .arrow-right {
+          height: 0;
+          width: 0;
+          border-top: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+          border-left: 10px solid black;
+
+          margin-left: auto;
+        }
+
+        &:hover .arrow-right {
+          border-left: 10px solid white;
+        }
+      }
+
+      .divider {
+        margin: 0.75rem 0;
+      }
+    }
+  }
+}
