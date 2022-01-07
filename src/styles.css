@@ -1,0 +1,39 @@
+:root {
+    --container-width: 1200px;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+  }
+
+main {
+    min-height: 96vh;
+}
+
+header {
+    background: #ffd000;
+    height: 96px;
+    padding: .5rem 0;
+}
+
+header > .container {
+    display: flex;
+    align-items: center;
+}
+
+.giraffe-logo {
+    height: 91px;
+    margin-right: 1rem;
+}
+
+.driver-entry {
+    margin-top: 2rem;
+}
+
+/* Remember to align this with --container-width */
+@media (max-width: 1250px) {
+    .container {
+        padding: 0 50px;
+    }
+}
