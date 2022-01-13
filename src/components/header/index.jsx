@@ -5,7 +5,7 @@ export default () => {
   return (
     <header>
       <div className="container">
-        <Link to="/">
+        <Link to="/random-driver">
           <img
             src={giraffeLogo}
             alt="I'm a Giraffe! Logo"
