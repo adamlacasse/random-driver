@@ -65,6 +65,10 @@ header > .container {
     margin-top: 2rem;
 }
 
+.grey {
+    color: #c0bfc0;
+}
+
 /* Remember to align this with --container-width */
 @media (max-width: 1250px) {
     .container {
