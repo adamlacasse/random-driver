@@ -2,6 +2,40 @@
     --container-width: 1200px;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.results-header {
+    margin-bottom: .5rem;
+}
+
+.results-list {
+    margin-bottom: 1rem;
+}
+
+.btn-primary {
+    border: none;
+    background: #78e1e1;
+    padding: .5rem 1rem;
+    font-size: large;
+}
+
+.btn-secondary {
+    background: white;
+    border-color: #06748c;
+    color: #06748c;
+    padding: .5rem 1rem;
+    font-size: large;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    cursor: pointer;
+    background: #06748c;
+    color: white;
+}
+
 .container {
     max-width: var(--container-width);
     margin: 0 auto;
