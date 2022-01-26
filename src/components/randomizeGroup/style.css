@@ -1,3 +1,31 @@
 .rando-group-header {
-    margin: 1rem 0;
+  margin: 1rem 0;
+}
+
+.remove-btn {
+  background-color: white;
+  border: none;
+  color: #06748c;
+  cursor: pointer;
+  margin-left: 0.25rem;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+
+  background: white;
+  color: #06748c;
+  padding: 0.25rem;
+  white-space: nowrap;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
