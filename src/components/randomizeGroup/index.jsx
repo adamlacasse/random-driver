@@ -1,10 +1,12 @@
 import { useState } from "react";
 import GroupEntry from "../groupEntry";
+import GroupMember from "../randomizedMember";
+import UnrandomizedMember from "../unrandomizedMember";
 
 import "./style.css";
 
 export default (props) => {
-  const { drivers } = props;
+  const { drivers, setDrivers } = props;
   const [randomizedGroup, setRandomizedGroup] = useState([]);
 
   return (
@@ -25,8 +27,15 @@ export default (props) => {
               randomizedGroup.length > 0 ? "grey" : ""
             }`}
           >
-            {drivers.map((driver, index) => (
-              <li key={driver + index}>{driver}</li>
+            {drivers.map(member => (
+              <UnrandomizedMember
+                key={member} 
+                member={member} 
+                drivers={drivers} 
+                setDrivers={setDrivers} 
+                randomizedGroup={randomizedGroup}
+                setRandomizedGroup={setRandomizedGroup}
+              />
             ))}
           </ol>
           <button
@@ -46,21 +55,8 @@ export default (props) => {
                 Let's go in this order today!
               </h2>
               <ol>
-                {randomizedGroup.map((member, index) => (
-                  <li key={index + member}>
-                    {member}
-                    <button
-                      className="remove-btn tooltip"
-                      onClick={() =>
-                        setRandomizedGroup(
-                          randomizedGroup.filter(originalMember => originalMember !== member)
-                        )
-                      }
-                    >
-                      <span>x</span>
-                      <span className="tooltiptext">Remove this member</span>
-                    </button>
-                  </li>
+                {randomizedGroup.map(member => (
+                  <GroupMember key={member} member={member} />
                 ))}
               </ol>
             </>

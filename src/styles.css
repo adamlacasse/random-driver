@@ -69,6 +69,14 @@ header > .container {
     color: #c0bfc0;
 }
 
+ol {
+    margin-bottom: 2rem;
+}
+
+form {
+    margin-bottom: .5rem;
+}
+
 /* Remember to align this with --container-width */
 @media (max-width: 1250px) {
     .container {

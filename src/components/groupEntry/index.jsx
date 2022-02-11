@@ -1,6 +1,15 @@
+import { useState } from 'react';
+import currentGiraffes from '../../data/currentGiraffes.json';
+
 import "./style.css";
 
-export default ({ inputValue, setInputValue, handleSubmit }) => {
+export default ({ inputValue, setInputValue, handleSubmit, setDrivers, drivers }) => {
+  const [giraffesAdded, setGiraffesAdded] = useState(false);
+  const handleAddGiraffes = () => {
+    setDrivers([...drivers, ...currentGiraffes]);
+    setGiraffesAdded(true);
+  }
+
   return (
     <section className="group-entry">
       <p>Enter group one at a time or comma separated</p>
@@ -17,6 +26,10 @@ export default ({ inputValue, setInputValue, handleSubmit }) => {
             disabled={!inputValue}
         />
       </form>
+      <p>
+        {'Or '}
+        <button onClick={handleAddGiraffes} disabled={giraffesAdded}>Populate with all the Giraffes</button>
+      </p>
     </section>
   );
 };

@@ -24,7 +24,9 @@ function App() {
     setInputValue("");
   };
 
-  const formProps = {
+  const propsObj = {
+    drivers,
+    setDrivers,
     inputValue,
     setInputValue,
     handleSubmit,
@@ -33,11 +35,11 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Header />
+        <Header setDrivers={setDrivers} />
         <Switch>
           <Route exact path="/random-driver" component={Chooser} />
-          <Route exact path="/random-driver/driver" render={() => <Driver drivers={drivers} {...formProps} />} />
-          <Route exact path="/random-driver/group" render={() => <RandomizeGroup drivers={drivers} {...formProps} />} />
+          <Route exact path="/random-driver/driver" render={() => <Driver {...propsObj} />} />
+          <Route exact path="/random-driver/group" render={() => <RandomizeGroup {...propsObj} />} />
         </Switch>
       </BrowserRouter>
     </>
