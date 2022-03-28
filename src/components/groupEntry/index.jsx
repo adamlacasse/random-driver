@@ -1,6 +1,11 @@
 import { useState } from 'react';
 import currentGiraffes from '../../data/currentGiraffes.json';
 
+const itsAprilFoolsDay = new Date().getMonth() === 4 && new Date().getDate() === 1;
+if (itsAprilFoolsDay) {
+  currentGiraffes.push('Big Chungus 🐰');
+};
+
 import "./style.css";
 
 export default ({ inputValue, setInputValue, handleSubmit, setDrivers, drivers }) => {
