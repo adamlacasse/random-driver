@@ -1,23 +1,16 @@
 {
   "files": {
-    "main.css": "/random-driver/static/css/main.82c91433.chunk.css",
-    "main.js": "/random-driver/static/js/main.0575c012.chunk.js",
-    "main.js.map": "/random-driver/static/js/main.0575c012.chunk.js.map",
-    "runtime-main.js": "/random-driver/static/js/runtime-main.0ca2b68b.js",
-    "runtime-main.js.map": "/random-driver/static/js/runtime-main.0ca2b68b.js.map",
-    "static/js/2.e1cdf388.chunk.js": "/random-driver/static/js/2.e1cdf388.chunk.js",
-    "static/js/2.e1cdf388.chunk.js.map": "/random-driver/static/js/2.e1cdf388.chunk.js.map",
+    "main.css": "/random-driver/static/css/main.c3e8ba5b.css",
+    "main.js": "/random-driver/static/js/main.72725784.js",
+    "static/media/huddle.jpg": "/random-driver/static/media/huddle.f682a926dd1945f6ae9f.jpg",
+    "static/media/steering-wheel.jpeg": "/random-driver/static/media/steering-wheel.c2d162422d70c1c24dd1.jpeg",
+    "static/media/giraffeLogo.png": "/random-driver/static/media/giraffeLogo.4c123223171b7c39c3f3.png",
     "index.html": "/random-driver/index.html",
-    "static/css/main.82c91433.chunk.css.map": "/random-driver/static/css/main.82c91433.chunk.css.map",
-    "static/js/2.e1cdf388.chunk.js.LICENSE.txt": "/random-driver/static/js/2.e1cdf388.chunk.js.LICENSE.txt",
-    "static/media/giraffeLogo.4c123223.png": "/random-driver/static/media/giraffeLogo.4c123223.png",
-    "static/media/huddle.f682a926.jpg": "/random-driver/static/media/huddle.f682a926.jpg",
-    "static/media/steering-wheel.c2d16242.jpeg": "/random-driver/static/media/steering-wheel.c2d16242.jpeg"
+    "main.c3e8ba5b.css.map": "/random-driver/static/css/main.c3e8ba5b.css.map",
+    "main.72725784.js.map": "/random-driver/static/js/main.72725784.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.0ca2b68b.js",
-    "static/js/2.e1cdf388.chunk.js",
-    "static/css/main.82c91433.chunk.css",
-    "static/js/main.0575c012.chunk.js"
+    "static/css/main.c3e8ba5b.css",
+    "static/js/main.72725784.js"
   ]
 }
