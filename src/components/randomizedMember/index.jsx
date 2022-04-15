@@ -1,11 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./style.css";
+import draggableLogic from "../../helpers/draggable";
 
 export default ({ member }) => {
   const [turnTaken, setTurnTaken] = useState(false);
+  useEffect(() => {
+    draggableLogic();
+  }, []);
 
   return (
-    <li>
+    <li className="draggable" draggable="true">
       <span className={`${turnTaken ? "turn-taken grey" : ""}`}>{member}</span>
       <button
         className="check-btn tooltip"

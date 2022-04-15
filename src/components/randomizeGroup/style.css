@@ -1,3 +1,26 @@
 .rando-group-header {
-  margin: 1rem 0;
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+}
+
+.new-feature {
+  margin-bottom: 1rem;
+}
+
+.draggable-container {
+  line-height: 1.5;
+}
+
+.draggable {
+  cursor: move;
+}
+
+.draggable.dragging {
+  background-color: #ffd000;
+  width: fit-content;
+  transform: scale(0.75);
+}
+
+.draggable.dragging > button {
+  display: none;
 }

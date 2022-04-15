@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import GroupEntry from "../groupEntry";
 import GroupMember from "../randomizedMember";
 import UnrandomizedMember from "../unrandomizedMember";
@@ -22,7 +22,7 @@ export default (props) => {
           >
             Un-randomized Group
           </h3>
-          <ol
+          <ul
             className={`results-list ${
               randomizedGroup.length > 0 ? "grey" : ""
             }`}
@@ -37,7 +37,7 @@ export default (props) => {
                 setRandomizedGroup={setRandomizedGroup}
               />
             ))}
-          </ol>
+          </ul>
           <button
             className={
               randomizedGroup.length > 0 ? "btn-secondary" : "btn-primary"
@@ -54,11 +54,14 @@ export default (props) => {
               <h2 className="rando-group-header">
                 Let's go in this order today!
               </h2>
-              <ol>
+              <h3 className="new-feature">
+                <mark>New feature:</mark> Drag and drop to re-order the randomized group!
+              </h3>
+              <ul className="draggable-container">
                 {randomizedGroup.map(member => (
                   <GroupMember key={member} member={member} />
                 ))}
-              </ol>
+              </ul>
             </>
           )}
         </>
