@@ -11,7 +11,7 @@ import "./style.css";
 export default ({ inputValue, setInputValue, handleSubmit, setDrivers, drivers }) => {
   const [giraffesAdded, setGiraffesAdded] = useState(false);
   const handleAddGiraffes = () => {
-    setDrivers([...drivers, ...currentGiraffes]);
+    setDrivers([...drivers, ...currentGiraffes.sort()]);
     setGiraffesAdded(true);
   }
 
