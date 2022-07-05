@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/random-driver/static/css/main.c3e8ba5b.css",
-    "main.js": "/random-driver/static/js/main.f0bf63d7.js",
+    "main.js": "/random-driver/static/js/main.64112319.js",
     "static/media/huddle.jpg": "/random-driver/static/media/huddle.f682a926dd1945f6ae9f.jpg",
     "static/media/steering-wheel.jpeg": "/random-driver/static/media/steering-wheel.c2d162422d70c1c24dd1.jpeg",
     "static/media/giraffeLogo.png": "/random-driver/static/media/giraffeLogo.4c123223171b7c39c3f3.png",
     "index.html": "/random-driver/index.html",
     "main.c3e8ba5b.css.map": "/random-driver/static/css/main.c3e8ba5b.css.map",
-    "main.f0bf63d7.js.map": "/random-driver/static/js/main.f0bf63d7.js.map"
+    "main.64112319.js.map": "/random-driver/static/js/main.64112319.js.map"
   },
   "entrypoints": [
     "static/css/main.c3e8ba5b.css",
-    "static/js/main.f0bf63d7.js"
+    "static/js/main.64112319.js"
   ]
 }
