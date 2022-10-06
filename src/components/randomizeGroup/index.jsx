@@ -54,9 +54,7 @@ export default (props) => {
               <h2 className="rando-group-header">
                 Let's go in this order today!
               </h2>
-              <h3 className="new-feature">
-                <mark>New feature:</mark> Drag and drop to re-order the randomized group!
-              </h3>
+              <p className="drag-drop-text">Drag and drop to rearrange the group</p>
               <ul className="draggable-container">
                 {randomizedGroup.map(member => (
                   <GroupMember key={member} member={member} />
