@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Header from "./components/header";
 import Chooser from "./components/chooser";
@@ -36,11 +36,11 @@ function App() {
     <>
       <BrowserRouter>
         <Header setDrivers={setDrivers} />
-        <Switch>
-          <Route exact path="/random-driver" component={Chooser} />
-          <Route exact path="/random-driver/driver" render={() => <Driver {...propsObj} />} />
-          <Route exact path="/random-driver/group" render={() => <RandomizeGroup {...propsObj} />} />
-        </Switch>
+        <Routes>
+          <Route path="/random-driver" element={<Chooser />} />
+          <Route path="/random-driver/driver" element={<Driver {...propsObj} />} />
+          <Route path="/random-driver/group" element={<RandomizeGroup {...propsObj} />} />
+        </Routes>
       </BrowserRouter>
     </>
   );
