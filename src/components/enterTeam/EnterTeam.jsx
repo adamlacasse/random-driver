@@ -7,6 +7,7 @@ import './EnterTeam.scss';
 function EnterTeam({ unrandomizedGroup, setUnrandomizedGroup }) {
     const [inputValue, setInputValue] = useState('');
     const [giraffesAdded, setGiraffesAdded] = useState(false);
+
     const sortFunction = (a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' })
 
     const handleAddGiraffes = () => {
@@ -36,7 +37,11 @@ function EnterTeam({ unrandomizedGroup, setUnrandomizedGroup }) {
                     onChange={(e) => setInputValue(e.target.value)}
                     required
                 />
-                <button type="submit" id="form-submit-btn">
+                <button
+                    type="submit" 
+                    id="form-submit-btn"
+                    disabled={unrandomizedGroup.includes(inputValue)}
+                >
                     Add them!
                 </button>
             </form>

@@ -1,14 +1,21 @@
 import { useState } from 'react';
+import trashIcon from '../../images/delete_FILL0_wght400_GRAD0_opsz48.svg'
+
 import './RandomizedGroup.scss';
 
-export default function RandomizedGroup({ unrandomizedGroup }) {
+export default function RandomizedGroup({ unrandomizedGroup, setShowEnterTeam }) {
   const [randomizedGroup, setRandomizedGroup] = useState([]);
 
+  const handleRandomizeBtnClick = () => {
+    setRandomizedGroup([...unrandomizedGroup].sort(() => Math.random() - 0.5));
+    setShowEnterTeam(false);
+  };
+
   const buttonMarkup = (
-    <section id="randomized-group-section">
+    <section className="randomized-group-section">
       <button 
-        id="randomize-group-btn" 
-        onClick={() => setRandomizedGroup([...unrandomizedGroup].sort(() => Math.random() - 0.5))}
+        onClick={handleRandomizeBtnClick}
+        disabled={unrandomizedGroup.length < 2}
       >
         Randomize the group!
       </button>
@@ -16,16 +23,23 @@ export default function RandomizedGroup({ unrandomizedGroup }) {
   );
 
   const listMarkup = (
-    <>
-      <h2>here's the randomized group....</h2>
-      <ul>
+    <section className="randomized-group-section">
+      <h2>Let's go in this order!</h2>
+      <ol>
         {randomizedGroup.map(member => (
-          <li key={member}>
+          <li key={member} title="Drag to reorder">
             <span>{member}</span>
+            <button 
+                type="button" 
+                className="remove-btn" 
+                onClick={() => setRandomizedGroup(randomizedGroup.filter((personToRemove) => personToRemove != member))}
+            >
+                <img src={trashIcon} className="trash-icon" />
+            </button>
           </li>
         ))}
-      </ul>
-    </>
+      </ol>
+    </section>
   );
 
   return randomizedGroup.length > 0 ? listMarkup : buttonMarkup;
