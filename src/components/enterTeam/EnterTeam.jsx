@@ -18,7 +18,7 @@ function EnterTeam({ unrandomizedGroup, setUnrandomizedGroup }) {
     const handleFormSubmit = (e) => {
         e.preventDefault();
         if (inputValue.includes(',')) {
-            const peepsToAdd = inputValue().split(',');
+            const peepsToAdd = inputValue.split(',');
             setUnrandomizedGroup([...unrandomizedGroup, ...peepsToAdd].sort(sortFunction));
             setInputValue('');
             return;
@@ -55,10 +55,10 @@ function EnterTeam({ unrandomizedGroup, setUnrandomizedGroup }) {
                         <span>{member}</span>
                         <button 
                             type="button" 
-                            className="remove-btn" 
+                            className="inline-btn" 
                             onClick={() => setUnrandomizedGroup(unrandomizedGroup.filter((personToRemove) => personToRemove != member))}
                         >
-                            <img src={trashIcon} className="trash-icon" />
+                            <img src={trashIcon} className="btn-icon" />
                         </button>
                     </li>
                 ))}

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import trashIcon from '../../images/delete_FILL0_wght400_GRAD0_opsz48.svg'
+import RandomizedMember from './randomizedMember/RandomizedMember';
 
 import './RandomizedGroup.scss';
 
@@ -13,7 +13,7 @@ export default function RandomizedGroup({ unrandomizedGroup, setShowEnterTeam })
 
   const buttonMarkup = (
     <section className="randomized-group-section">
-      <button 
+      <button
         onClick={handleRandomizeBtnClick}
         disabled={unrandomizedGroup.length < 2}
       >
@@ -25,18 +25,16 @@ export default function RandomizedGroup({ unrandomizedGroup, setShowEnterTeam })
   const listMarkup = (
     <section className="randomized-group-section">
       <h2>Let's go in this order!</h2>
-      <ol>
-        {randomizedGroup.map(member => (
-          <li key={member} title="Drag to reorder">
-            <span>{member}</span>
-            <button 
-                type="button" 
-                className="remove-btn" 
-                onClick={() => setRandomizedGroup(randomizedGroup.filter((personToRemove) => personToRemove != member))}
-            >
-                <img src={trashIcon} className="trash-icon" />
-            </button>
-          </li>
+      <p>Drag and drop to reorder</p>
+      <ol className='draggable-container'>
+        {randomizedGroup.map((member, index) => (
+          <RandomizedMember 
+            key={`${index}-${member}`} 
+            id={`${index}-${member}`} 
+            member={member}
+            randomizedGroup={randomizedGroup}
+            setRandomizedGroup={setRandomizedGroup}
+          />
         ))}
       </ol>
     </section>
