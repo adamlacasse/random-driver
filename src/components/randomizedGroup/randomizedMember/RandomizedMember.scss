@@ -1,0 +1,17 @@
+.randomized-member {
+    margin-bottom: .5rem;
+    cursor: grab;
+}
+
+.turn-taken {
+    --bg-color: lightgrey;
+    --color: grey;
+    background-color: var(--bg-color);
+    color: var(--color);
+    text-decoration: line-through;
+}
+
+.turn-taken:hover, .turn-taken:focus-within {
+    background-color: var(--bg-color);
+    color: var(--color);
+}

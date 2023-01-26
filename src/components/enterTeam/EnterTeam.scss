@@ -1,0 +1,32 @@
+#enter-team-section {
+    padding-bottom: 2em;
+
+    #form-submit-btn {
+        margin-left: .25em;
+    }
+
+    #add-giraffes-btn {
+        margin-bottom: 1em;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr auto);
+        gap: 1em;
+    }
+
+    @media only screen and (max-width: 900px)  {
+        ul {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media only screen and (max-width: 440px)  {
+        ul {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
