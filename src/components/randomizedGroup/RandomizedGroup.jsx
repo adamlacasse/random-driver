@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import RandomizedMember from './randomizedMember/RandomizedMember';
+import Form from '../form/Form';
 
 import './RandomizedGroup.scss';
 
@@ -37,6 +38,7 @@ export default function RandomizedGroup({ unrandomizedGroup, setShowEnterTeam })
           />
         ))}
       </ol>
+      <Form array={randomizedGroup} setArray={setRandomizedGroup} alphabetizeNewArry={false} />
     </section>
   );
 

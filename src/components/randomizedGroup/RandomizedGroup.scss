@@ -1,10 +1,27 @@
 .randomized-group-section {
     p {
         font-size: .6em;
-        color: lightcoral;
+        color: green;
         margin-bottom: .75rem;
     }
+
     ol {
         padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        li {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 440px)  {
+        form > input {
+            width: 95%;
+        }
+        ul {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 }

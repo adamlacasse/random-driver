@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Form from '../form/Form';
 import currentGiraffes from '../../data/currentGiraffes.json';
 import trashIcon from '../../images/delete_FILL0_wght400_GRAD0_opsz48.svg'
 
@@ -29,22 +30,7 @@ function EnterTeam({ unrandomizedGroup, setUnrandomizedGroup }) {
     
     return (
         <section id="enter-team-section">
-            <h3>Enter group one at a time or comma separated</h3>
-            <form onSubmit={handleFormSubmit}>
-                <input
-                    type="text"
-                    value={inputValue}
-                    onChange={(e) => setInputValue(e.target.value)}
-                    required
-                />
-                <button
-                    type="submit" 
-                    id="form-submit-btn"
-                    disabled={unrandomizedGroup.includes(inputValue)}
-                >
-                    Add them!
-                </button>
-            </form>
+            <Form array={unrandomizedGroup} setArray={setUnrandomizedGroup} />
             <h3>and/or...</h3>
             <button id="add-giraffes-btn" onClick={handleAddGiraffes} disabled={giraffesAdded}>
                 Populate with the current Giraffe Squad

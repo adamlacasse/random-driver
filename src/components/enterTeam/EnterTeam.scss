@@ -1,10 +1,6 @@
 #enter-team-section {
     padding-bottom: 2em;
 
-    #form-submit-btn {
-        margin-left: .25em;
-    }
-
     #add-giraffes-btn {
         margin-bottom: 1em;
     }
@@ -18,13 +14,16 @@
         gap: 1em;
     }
 
-    @media only screen and (max-width: 900px)  {
+    @media (max-width: 900px)  {
         ul {
             grid-template-columns: repeat(2, 1fr);
         }
     }
 
-    @media only screen and (max-width: 440px)  {
+    @media (max-width: 440px)  {
+        form > input {
+            width: 95%;
+        }
         ul {
             grid-template-columns: repeat(1, 1fr);
         }

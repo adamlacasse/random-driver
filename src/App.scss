@@ -37,6 +37,10 @@ button[disabled] {
     cursor: not-allowed;
 }
 
+#form-submit-btn {
+    margin-left: .25em;
+}
+
 li {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     background-color: #ffd000;
@@ -67,5 +71,17 @@ li {
 
     .btn-icon {
         width: .75em;
+    }
+}
+
+@media (max-width: 440px)  {
+    #root {
+        h1 {
+            font-size: 1em;
+        }
+
+        h3, button {
+            font-size: .65em;
+        }
     }
 }
