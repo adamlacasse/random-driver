@@ -18,7 +18,7 @@ function Form({
     
     return (
         <>
-            <h3>Enter group one at a time or comma separated</h3>
+            <h3>Enter one name at a time or multiple names separated by commas</h3>
             <form onSubmit={handleFormSubmit}>
                 <input
                     type="text"
