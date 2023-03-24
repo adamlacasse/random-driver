@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import giraffeLogo from './images/giraffeLogo.png';
+import AppHeader from './components/appHeader/AppHeader';
 import EnterTeam from './components/enterTeam/EnterTeam';
 import RandomizedGroup from './components/randomizedGroup/RandomizedGroup';
 
@@ -11,6 +12,7 @@ function App() {
 
   return (
     <>
+      <AppHeader />
       <h1>Giraffe Randomizer</h1>
       <main>
         {showEnterTeam && <EnterTeam unrandomizedGroup={unrandomizedGroup} setUnrandomizedGroup={setUnrandomizedGroup} />}
